@@ -1,0 +1,27 @@
+<ion-list>
+  <ion-item *ngFor="let ticker of watchlist.tickers; let i=index;">
+    <ion-grid class="item-section">
+      <ion-row>
+        <ion-col>
+          <!--<img class="sprite-" + ticker.name>-->
+          <span class="sprite sprite-{{ticker.name.toLowerCase()}}"></span>
+          <p>{{ticker.code}}</p>
+        </ion-col>
+        <ion-col>
+          <p>{{(ticker.holdings * ticker.price_usd) | currency:'USD':true:'1.2-2'}}</p>
+          <p>{{ticker.holdings}}</p>
+        </ion-col>
+        <ion-col>
+          <p class="price">{{ticker.price_usd | currency:'USD':true:'1.2-2'}}</p>
+          <!--<ion-icon [appPercentChange]="ticker.percent_change_24h"-->
+          <!--ios="ios-arrow-round-down"-->
+          <!--md="md-arrow-round-down"></ion-icon>-->
+          <p [appPercentChange]="ticker.percent_change_btc_24h">{{ticker.percent_change_btc_24h}}%</p>
+        </ion-col>
+        <ion-col>
+          <ion-icon ios="ios-notifications-outline" md="md-notifications-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>

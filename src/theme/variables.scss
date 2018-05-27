@@ -1,0 +1,100 @@
+@import "../theme/icons/asset-icons-16-1";
+@import "../theme/icons/asset-icons-16-2";
+@import "../theme/icons/default-icons";
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:        #488aff,
+  secondary: rgba(72, 138, 255, 0.33),
+  blue-gray:      #f4f4f4,
+  grey:           #6D7D88,
+  dark:           #1A222B,
+  white:          #E7EAED,
+  danger:         #FF0000,
+  yellow:         #FF9800,
+  green:          #388E3C,
+
+  //danger:     #f53d3d,
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+$searchbar-ios-input-background-color: #E5E5E5;
+$searchbar-ios-background-color: map-get($colors, white);
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+$searchbar-md-input-background-color: #E5E5E5;
+$searchbar-md-background-color: map-get($colors, white);
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+$searchbar-wp-input-background-color: #E5E5E5;
+$searchbar-wp-background-color: map-get($colors, white);
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

@@ -1,0 +1,44 @@
+<ion-toolbar class="toolbar">
+  <ion-card class="card">
+    <ion-card-header class="card-header">
+      <ion-grid class="without-padding">
+        <ion-row class="without-padding">
+          <ion-col col-6 class="without-padding">
+            <p class="without-padding">Total Portfolio Value</p>
+            <h1>{{watchlist.total_usd | currency:'USD':true:'1.2-2'}}</h1>
+            <ion-icon ios="logo-bitcoin" md="logo-bitcoin"></ion-icon>
+            <span>{{watchlist.total_btc}}</span>
+          </ion-col>
+          <ion-col col-6 text-right>
+            <p>24hr Change</p>
+            <p>
+              <span>{{watchlist.change_usd_24h | currency:'USD':true:'1.2-2'}}</span>
+              <span [appPercentChange]="watchlist.percent_change_usd_24h">({{watchlist.percent_change_usd_24h}}%)</span>
+            </p>
+            <p>
+              <span>+<ion-icon ios="logo-bitcoin" md="logo-bitcoin"></ion-icon>{{watchlist.change_btc_24h}}</span>
+              <span [appPercentChange]="watchlist.percent_change_btc_24h">({{watchlist.percent_change_btc_24h}}%)</span>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-searchbar class="search" (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-grid class="btn-sections without-padding">
+      <ion-row class="without-padding">
+        <ion-col class="without-padding">
+          <button ion-button clear>Coin</button>
+        </ion-col >
+        <ion-col class="without-padding">
+          <button ion-button clear>Holdings</button>
+        </ion-col>
+        <ion-col class="without-padding">
+          <button ion-button clear>Price</button>
+        </ion-col>
+        <ion-col class="without-padding">
+          <button ion-button clear>Alert</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-toolbar>
