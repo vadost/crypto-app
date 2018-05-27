@@ -1,28 +1,20 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { ApiService } from './api/api.service';
-import { AssetsApiService } from './api/assets.api.service';
-import { ExchangesApiService } from './api/exchanges.api.service';
-import { SearchApiService } from './api/search.api.service';
-import { UserApiService } from './api/user.api.service';
-import { WindowService } from './window.service';
+import { ApiProviders } from "./api/api.providers";
+import { WatchlistProviders } from "./api/watchlist.providers";
 
 @NgModule({
   imports: [
     HttpClientModule,
   ]
 })
-export class ServicesModule {
+export class ProvidersModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: ServicesModule,
+      ngModule: ProvidersModule,
       providers: [
-        ApiService,
-        AssetsApiService,
-        ExchangesApiService,
-        SearchApiService,
-        UserApiService,
-        WindowService,
+        ApiProviders,
+        WatchlistProviders,
       ]
     };
   }

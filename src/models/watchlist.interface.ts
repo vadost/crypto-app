@@ -1,17 +1,23 @@
+export interface Watchlist {
+  "total_usd": number,
+  "change_usd_24h": string,
+  "percent_change_usd_24h": string,
+  "total_btc": number,
+  "change_btc_24h": string,
+  "percent_change_btc_24h": string,
+  "isHasAlert": boolean,
+  "tickers": Ticket[]
+}
+
 export interface Ticket {
-  volume_usd_24h: string;
-  available_supply: string;
-  id: string;
-  last_updated: string;
-  market_cap_usd: string;
-  max_supply: string;
-  name: string;
-  percent_change_1h: string;
-  percent_change_7d: string;
-  percent_change_24h: string;
-  price_btc: string;
-  price_usd: string;
-  rank: string;
-  symbol: string;
-  total_supply: string;
+  "name": string,
+  "code": string,
+  "holdings": number,
+  "rank": number,
+  "price_btc": number,
+  "change_btc_24h": string,
+  "percent_change_btc_24h": string,
+  "price_usd": number,
+  "change_usd_24h": string,
+  "percent_change_usd_24h": string,
 }

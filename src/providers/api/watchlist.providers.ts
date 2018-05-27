@@ -4,12 +4,17 @@ import { Tickers } from "./mokups/tickers";
 import { of } from "rxjs/observable/of";
 
 @Injectable()
-export class TickersProviders {
+export class WatchlistProviders {
 
   constructor() {}
 
-  getTickers(): Observable<any> {
+  getWatchlist(): Observable<any> {
     // return this.apiProviders.get(`tickers/`);
     return of(Tickers.getTickers());
+  }
+
+  getWatchlist2(): Observable<any> {
+    // return this.apiProviders.get(`tickers/`);
+    return of(Tickers.getTickersMap());
   }
 }

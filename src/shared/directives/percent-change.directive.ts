@@ -1,10 +1,14 @@
-import { Directive, ElementRef } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[appPercentChange]'
 })
-export class HighlightDirective {
-  constructor(el: ElementRef) {
-    el.nativeElement.style.backgroundColor = 'yellow';
+export class PercentChangeDirective implements AfterViewInit {
+  @Input() appPercentChange: string;
+
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    this.el.nativeElement.style.color = this.appPercentChange.startsWith('-') ? 'red' : 'green';
   }
 }
