@@ -9,7 +9,8 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "sprites": "node sprites.js"
   },
   "dependencies": {
     "@angular/animations": "5.2.9",
@@ -31,6 +32,8 @@
     "ionicons": "3.0.0",
     "rxjs": "5.5.7",
     "sw-toolbox": "3.6.0",
+    "spritesheet-templates": "^10.2.2",
+    "spritesmith": "^3.3.0",
     "zone.js": "0.8.20"
   },
   "devDependencies": {
