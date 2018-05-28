@@ -8,13 +8,13 @@ export class WatchlistProviders {
 
   constructor() {}
 
-  getWatchlist(): Observable<any> {
-    // return this.apiProviders.get(`tickers/`);
-    return of(Tickers.getTickers());
+  getTotalInfo(): Observable<any> {
+    // return this.apiProviders.get(`total-info/`);
+    return of(Tickers.getTotalInfo());
   }
 
-  getWatchlist2(): Observable<any> {
+  getTickers(): Observable<any> {
     // return this.apiProviders.get(`tickers/`);
-    return of(Tickers.getTickersMap());
+    return of(Tickers.getTickers());
   }
 }

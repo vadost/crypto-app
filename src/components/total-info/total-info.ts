@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Watchlist } from "../../models/watchlist.interface";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TotalInfo } from "../../models/watchlist.interface";
 
 /**
  * Generated class for the TotalInfoComponent component.
@@ -12,5 +12,6 @@ import { Watchlist } from "../../models/watchlist.interface";
   templateUrl: 'total-info.html'
 })
 export class TotalInfoComponent {
-  @Input() watchlist: Watchlist;
+  @Input() totalInfo: TotalInfo;
+  @Output() searchItems = new EventEmitter<string>();
 }

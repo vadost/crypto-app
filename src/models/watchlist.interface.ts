@@ -1,4 +1,4 @@
-export interface Watchlist {
+export interface TotalInfo {
   "total_usd": number,
   "change_usd_24h": string,
   "percent_change_usd_24h": string,
@@ -6,10 +6,9 @@ export interface Watchlist {
   "change_btc_24h": string,
   "percent_change_btc_24h": string,
   "isHasAlert": boolean,
-  "tickers": Ticket[]
 }
 
-export interface Ticket {
+export interface Ticker {
   "name": string,
   "code": string,
   "holdings": number,

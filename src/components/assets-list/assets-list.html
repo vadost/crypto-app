@@ -1,10 +1,9 @@
 <ion-list>
-  <ion-item *ngFor="let ticker of watchlist.tickers; let i=index;">
+  <ion-item *ngFor="let ticker of tickers; let i=index;">
     <ion-grid class="item-section">
       <ion-row>
         <ion-col>
-          <!--<img class="sprite-" + ticker.name>-->
-          <span class="sprite sprite-{{ticker.name.toLowerCase()}}"></span>
+          <span class="icon" appIcons [type]="'asset16'" [code]="ticker.code"></span>
           <p>{{ticker.code}}</p>
         </ion-col>
         <ion-col>

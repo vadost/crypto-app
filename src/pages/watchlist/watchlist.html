@@ -20,11 +20,13 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <total-info [watchlist]="watchlist$ | async"></total-info>
+  <total-info [totalInfo]="totalInfo$ | async"
+              (searchItems)="onSearchItems($event)"></total-info>
 
 </ion-header>
 
 
 <ion-content>
-  <assets-list [watchlist]="watchlist$ | async"></assets-list>
+  <assets-list [totalInfo]="totalInfo$ | async"
+               [tickers]="tickers$ | async"></assets-list>
 </ion-content>
